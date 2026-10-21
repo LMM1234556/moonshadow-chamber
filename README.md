@@ -4,6 +4,16 @@
 
 ![月影议事厅主界面](docs/images/game-main-desktop.png)
 
+**快速浏览：** [AI 产品案例](docs/product-case-study.md) · [AI 应用开发技术案例](docs/technical-case-study.md) · [公平性评测](docs/rule-bot-fairness-baseline.md) · [发布检查清单](PORTFOLIO_RELEASE_CHECKLIST.md) · [本地运行](#本地运行)
+
+**项目亮点（截至 2026-10-21）**
+
+- **产品设计**：将功能原型迭代为月光古堡主题游戏界面，完成桌面端和移动视口的交互验收。
+- **AI 应用工程**：独立规则引擎配合双机器人模式；模型决策采用角色可见信息投影、结构化输出校验、合法候选复核和失败降级。
+- **可量化迭代**：定位并修复首日投票的固定座位偏置；1000 局主基线中，旧策略 P1 得票占比为 77.73%，修复后各席位为 15.97%—17.43%。
+
+> **展示边界：** 当前是本地单人教学原型，不提供公网试玩。大模型只完成单次真实发言调用验证，尚未证明完整对局的策略优势。批量评测中的“真人席位”由机器人代理，不是人类试玩数据。
+
 ## 项目概览
 
 「月影议事厅」将狼人杀的规则执行、机器人决策和界面表现拆成相互约束的三层，重点验证 AI 角色在隐藏信息游戏中的可见信息边界、结构化输出和失败降级。
@@ -216,3 +226,9 @@ npm run evaluate:rule-bot   # 1000 局旧版/当前规则机器人对照
 - [技术案例：游戏引擎、信息边界与模型接入](docs/technical-case-study.md)
 - [规则机器人公平性基线](docs/rule-bot-fairness-baseline.md)
 - [视觉设计系统记录](docs/ui-design-system-stage-1.md)
+- [作品集发布检查清单](PORTFOLIO_RELEASE_CHECKLIST.md)
+
+## 面向招聘的两种阅读路径
+
+- **AI 产品经理 / AI 产品实习**：先阅读[产品案例](docs/product-case-study.md)，了解阶段反馈、信息隐藏、移动端交互与评测指标的设计取舍。
+- **AI 应用开发 / Vibe Coding 实习**：先阅读[技术案例](docs/technical-case-study.md)，再运行单元测试和规则仿真，查看模型输入投影、结构校验和策略偏置回归。
