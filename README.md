@@ -2,9 +2,13 @@
 
 > 一款面向社群教学的 6 人网页狼人杀：以可验证的状态机承载完整对局，并提供可切换的规则机器人与阿里云百炼大模型模式。
 
+**作品集案例：** [AI 产品案例](docs/product-case-study.md) · [AI 应用开发技术案例](docs/technical-case-study.md)
+
 ![月影议事厅主界面](docs/images/game-main-desktop.png)
 
-**快速浏览：** [AI 产品案例](docs/product-case-study.md) · [AI 应用开发技术案例](docs/technical-case-study.md) · [公平性评测](docs/rule-bot-fairness-baseline.md) · [发布检查清单](PORTFOLIO_RELEASE_CHECKLIST.md) · [本地运行](#本地运行)
+**游戏主界面。** 月光古堡议事厅集中呈现六名玩家、当前阶段、行动区域与公开记录；所有席位和状态都来自真实游戏引擎。
+
+**快速浏览：** [公平性评测](docs/rule-bot-fairness-baseline.md) · [发布检查清单](PORTFOLIO_RELEASE_CHECKLIST.md) · [本地运行](#本地运行)
 
 **项目亮点（截至 2026-10-21）**
 
@@ -41,23 +45,35 @@
 
 ## 游戏页面展示
 
-所有图片均由项目当前页面在浏览器验收流程中真实截取，不是静态效果图。
+以下五张图片按“游戏主界面 → 夜晚查验 → 白天发言 → 结算 → 移动端”排列。它们均由项目当前页面在浏览器验收流程中真实截取，不是静态效果图；第一张主界面截图同时作为 README 封面。
 
-### 夜晚查验
+### 1. 游戏主界面
+
+README 顶部封面展示六人议事桌、真人预言家身份、当前发言阶段和公开日志，体现桌面端完整信息层级。
+
+### 2. 夜晚查验
 
 选择玩家和确认操作分离；查验结果只进入预言家的可见信息。
 
 ![夜晚查验](docs/images/night-check-desktop.png)
 
-### 白天发言与移动端
+### 3. 白天发言
 
-| 白天发言 | 移动端夜晚界面 |
-| --- | --- |
-| ![白天发言](docs/images/day-speech-mobile.png) | ![移动端界面](docs/images/game-mobile.png) |
+轮到真人发言时，界面突出当前行动者、已知查验信息、字数限制和提交状态；公开发言会进入所有存活玩家可见的日志。
 
-### 身份揭晓与胜负结算
+![白天发言](docs/images/day-speech-mobile.png)
+
+### 4. 身份揭晓与胜负结算
+
+游戏结束后按真实引擎结果展示获胜阵营、胜负原因、全部身份以及存活或出局状态，并提供重新开始入口。
 
 ![胜负结算](docs/images/game-result-desktop.png)
+
+### 5. 移动端界面
+
+移动端使用双列玩家卡片和紧凑阶段面板，保留目标选择与确认分离的操作方式，并避免行动区遮挡玩家席位。
+
+![移动端界面](docs/images/game-mobile.png)
 
 ## AI 系统架构
 
