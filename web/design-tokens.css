@@ -1,0 +1,137 @@
+:root {
+  color-scheme: dark;
+
+  /* Primitive palette */
+  --color-night-1000: #060914;
+  --color-night-950: #080c18;
+  --color-night-900: #0b1020;
+  --color-castle-850: #11182a;
+  --color-castle-800: #171e30;
+  --color-castle-700: #1e283d;
+  --color-castle-600: #29354d;
+  --color-gold-600: #a88651;
+  --color-gold-500: #c6a46a;
+  --color-gold-400: #d8bc86;
+  --color-gold-300: #ead5a8;
+  --color-moon-100: #dce5f5;
+  --color-moon-50: #f4f7fc;
+  --color-slate-300: #a7b2c7;
+  --color-slate-400: #8793aa;
+  --color-slate-500: #69758b;
+  --color-danger-700: #5d2134;
+  --color-danger-600: #782d43;
+  --color-danger-400: #b65c76;
+  --color-danger-200: #e4a9b8;
+  --color-ether-700: #326761;
+  --color-ether-500: #478a83;
+  --color-ether-300: #79b8b0;
+  --color-ether-100: #c2e2de;
+
+  /* Semantic surfaces */
+  --color-bg-canvas: var(--color-night-900);
+  --color-bg-deep: var(--color-night-1000);
+  --color-surface-default: var(--color-castle-800);
+  --color-surface-raised: var(--color-castle-700);
+  --color-surface-sunken: var(--color-castle-850);
+  --color-surface-overlay: rgba(17, 24, 42, 0.94);
+  --color-surface-scrim: rgba(3, 5, 12, 0.72);
+
+  /* Semantic text */
+  --color-text-primary: var(--color-moon-50);
+  --color-text-secondary: var(--color-moon-100);
+  --color-text-muted: var(--color-slate-300);
+  --color-text-subtle: var(--color-slate-400);
+  --color-text-disabled: var(--color-slate-500);
+  --color-text-accent: var(--color-gold-400);
+  --color-text-on-accent: #171106;
+  --color-text-danger: var(--color-danger-200);
+  --color-text-success: var(--color-ether-100);
+
+  /* Borders and interaction */
+  --color-border-subtle: rgba(220, 229, 245, 0.09);
+  --color-border-default: rgba(220, 229, 245, 0.16);
+  --color-border-strong: rgba(220, 229, 245, 0.28);
+  --color-border-accent: rgba(198, 164, 106, 0.62);
+  --color-border-danger: rgba(182, 92, 118, 0.68);
+  --color-focus-ring: var(--color-gold-300);
+  --color-interactive-primary: var(--color-gold-500);
+  --color-interactive-primary-hover: var(--color-gold-400);
+  --color-interactive-primary-pressed: var(--color-gold-600);
+  --color-interactive-secondary: var(--color-castle-700);
+  --color-interactive-secondary-hover: var(--color-castle-600);
+  --color-selected-bg: rgba(198, 164, 106, 0.13);
+  --color-selected-border: var(--color-gold-400);
+  --color-hover-overlay: rgba(220, 229, 245, 0.055);
+  --state-disabled-opacity: 0.42;
+
+  /* Game meaning */
+  --color-status-alive: var(--color-ether-300);
+  --color-status-out: var(--color-slate-500);
+  --color-status-warning: var(--color-gold-400);
+  --color-status-danger: var(--color-danger-400);
+  --color-role-seer: #9ebde5;
+  --color-role-werewolf: var(--color-danger-400);
+  --color-role-villager: var(--color-ether-300);
+  --color-phase-night: #718fca;
+  --color-phase-day: var(--color-gold-400);
+  --color-phase-vote: #c57b8f;
+  --color-phase-result: var(--color-ether-300);
+
+  /* Scene art and phase lighting */
+  --scene-background-image: url("/assets/backgrounds/moonlit-castle-hall.jpg");
+  --scene-overlay: rgba(4, 7, 16, 0.9);
+  --scene-stage-opacity: 0.34;
+  --scene-stage-filter: saturate(0.68) contrast(1.04) brightness(0.64);
+  --scene-glow: rgba(113, 143, 202, 0.2);
+  --scene-edge-light: rgba(220, 229, 245, 0.12);
+
+  /* Typography */
+  --font-family-display: Georgia, "Songti SC", "Noto Serif SC", serif;
+  --font-family-sans: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-size-2xs: 0.6875rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-md: 0.9375rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.375rem;
+  --font-size-2xl: clamp(1.75rem, 4vw, 3rem);
+  --line-height-tight: 1.2;
+  --line-height-copy: 1.65;
+  --letter-spacing-label: 0.16em;
+
+  /* Layout */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-pill: 999px;
+  --control-height-sm: 36px;
+  --control-height-md: 44px;
+  --control-height-lg: 50px;
+  --content-max-width: 1220px;
+
+  /* Depth and motion */
+  --shadow-panel: 0 22px 60px rgba(0, 0, 0, 0.28);
+  --shadow-raised: 0 14px 34px rgba(0, 0, 0, 0.34);
+  --shadow-accent: 0 0 32px rgba(198, 164, 106, 0.14);
+  --transition-fast: 140ms ease;
+  --transition-base: 200ms ease;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-overlay: 100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0.01ms;
+    --transition-base: 0.01ms;
+  }
+}

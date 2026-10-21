@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="月影议事厅暗黑奇幻视觉系统预览" />
+    <title>月影议事厅｜视觉系统</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/design-tokens.css" />
+    <link rel="stylesheet" href="/components.css" />
+    <link rel="stylesheet" href="/design-system.css" />
+  </head>
+  <body>
+    <main class="specimen-shell">
+      <header class="specimen-header">
+        <p class="specimen-kicker">MOONLIT CASTLE · DESIGN SYSTEM 01</p>
+        <h1>月影议事厅</h1>
+        <p>暗黑奇幻、月光古堡与现代网页游戏的基础视觉语言。本页只展示可复用的设计原语和组件状态，不承载游戏流程。</p>
+        <nav class="specimen-nav" aria-label="预览导航">
+          <a class="game-button game-button--primary" href="/">返回游戏</a>
+          <a class="game-button game-button--ghost" href="#components">查看组件</a>
+        </nav>
+      </header>
+
+      <section class="specimen-section" aria-labelledby="palette-title">
+        <h2 id="palette-title">核心色彩</h2>
+        <p class="specimen-lead">深蓝黑承载空间层级，月光银白保证长时间阅读，古典金色只用于关键行动与仪式感，暗红和幽绿表达危险与存活状态。</p>
+        <div class="swatch-grid">
+          <div class="swatch" style="--swatch: #0b1020"><strong>主背景</strong><span>#0B1020</span></div>
+          <div class="swatch" style="--swatch: #171e30"><strong>面板背景</strong><span>#171E30</span></div>
+          <div class="swatch" style="--swatch: #c6a46a"><strong>古典金色</strong><span>#C6A46A</span></div>
+          <div class="swatch" style="--swatch: #782d43"><strong>危险暗红</strong><span>#782D43</span></div>
+          <div class="swatch" style="--swatch: #478a83"><strong>状态幽绿</strong><span>#478A83</span></div>
+        </div>
+      </section>
+
+      <section id="components" class="specimen-section" aria-labelledby="button-title">
+        <h2 id="button-title">行动按钮</h2>
+        <p class="specimen-lead">所有可点击控件至少 44px 高，并为悬停、按下、键盘焦点、选中和禁用提供独立反馈。</p>
+        <div class="component-row">
+          <button class="game-button game-button--primary" type="button">主要行动</button>
+          <button class="game-button game-button--secondary" type="button">次要行动</button>
+          <button class="game-button game-button--danger" type="button">危险行动</button>
+          <button class="game-button game-button--ghost" type="button">弱化行动</button>
+          <button class="game-button game-button--secondary" type="button" aria-pressed="true">已选择</button>
+          <button class="game-button game-button--primary" type="button" disabled>不可行动</button>
+        </div>
+      </section>
+
+      <section class="specimen-section" aria-labelledby="badge-title">
+        <h2 id="badge-title">身份与状态徽章</h2>
+        <p class="specimen-lead">颜色始终与文字并用，避免只依赖色相传达身份或存活状态。</p>
+        <div class="component-row">
+          <span class="game-badge game-badge--seer">预言家</span>
+          <span class="game-badge game-badge--werewolf">狼人</span>
+          <span class="game-badge game-badge--villager">村民</span>
+          <span class="game-badge game-badge--success">存活</span>
+          <span class="game-badge game-badge--muted">已出局</span>
+          <span class="game-badge game-badge--gold">当前行动</span>
+        </div>
+      </section>
+
+      <section class="specimen-section" aria-labelledby="panel-title">
+        <h2 id="panel-title">面板层级</h2>
+        <p class="specimen-lead">克制使用高光、细边框和纵深；面板靠层级区分职责，不依赖夸张纹理。</p>
+        <div class="panel-grid">
+          <article class="game-panel panel-sample"><h3>标准面板</h3><p>承载玩家列表和公开信息。</p></article>
+          <article class="game-panel game-panel--raised panel-sample"><h3>行动面板</h3><p>用于当前回合最需要关注的操作。</p></article>
+          <article class="game-panel game-panel--danger panel-sample"><h3>危险状态</h3><p>用于淘汰、狼人或不可逆结果提示。</p></article>
+        </div>
+      </section>
+
+      <section class="specimen-section" aria-labelledby="phase-title-specimen">
+        <h2 id="phase-title-specimen">阶段标题</h2>
+        <p class="specimen-lead">结构保持一致，通过语义色与文案表达昼夜、投票和结算，避免页面整体跳变。</p>
+        <div class="phase-grid">
+          <div class="phase-heading phase-heading--night"><p class="phase-heading__label">Night phase</p><h3 class="phase-heading__title">夜幕降临</h3><p class="phase-heading__copy">月色负责氛围，清晰的阶段名称负责决策。</p></div>
+          <div class="phase-heading phase-heading--vote"><p class="phase-heading__label">Vote phase</p><h3 class="phase-heading__title">议事与投票</h3><p class="phase-heading__copy">危险色只提示决策压力，不覆盖主要正文。</p></div>
+        </div>
+      </section>
+
+      <section class="specimen-section" aria-labelledby="field-title">
+        <h2 id="field-title">表单控件</h2>
+        <p class="specimen-lead">输入区与选择器使用统一高度、边框和焦点状态，移动端保持足够触控面积。</p>
+        <div class="form-grid">
+          <select class="game-field" aria-label="组件状态示例"><option>选择一个状态</option></select>
+          <input class="game-field" aria-label="短文本示例" placeholder="输入简短内容" />
+          <textarea class="game-field" aria-label="长文本示例" placeholder="输入公开发言……"></textarea>
+        </div>
+        <p class="token-note">本页为视觉基础预览，不连接游戏状态，也不写入任何虚构对局数据。</p>
+      </section>
+    </main>
+  </body>
+</html>

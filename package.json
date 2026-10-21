@@ -1,0 +1,26 @@
+{
+  "name": "vibe-werewolf-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "simulate": "node scripts/simulate.js",
+    "start": "node server.js",
+    "test:e2e": "node scripts/e2e.js",
+    "test:model-live": "node scripts/live-model-smoke.js",
+    "evaluate:rule-bot": "node scripts/evaluate-rule-bot.js --games=1000 --mode=compare"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "^3.0.74",
+    "ai": "^7.0.146",
+    "dotenv": "^18.0.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.64.1"
+  }
+}

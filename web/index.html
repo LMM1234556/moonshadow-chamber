@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="6人狼人杀教学局：规则机器人与大模型角色模式演示" />
+    <title>月影议事厅｜狼人杀教学局</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/design-tokens.css" />
+    <link rel="stylesheet" href="/components.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"><i></i></span>
+          <div>
+            <p class="eyebrow">氛围编程 · 社群教学局</p>
+            <h1>月影议事厅</h1>
+          </div>
+        </div>
+
+        <div class="topbar-phase" aria-labelledby="phase-title">
+          <p id="round-label" class="eyebrow">准备开始</p>
+          <h2 id="phase-title">6 人教学简化局</h2>
+          <p id="phase-description" class="phase-description">
+            你固定扮演预言家。首夜全员保护，最高票平票时无人出局。
+          </p>
+        </div>
+
+        <div class="topbar-controls">
+          <div class="mode-control">
+            <label for="bot-mode">游戏模式</label>
+            <select id="bot-mode">
+              <option value="rule">规则机器人</option>
+              <option value="llm">阿里云百炼大模型</option>
+            </select>
+            <span id="mode-status" class="mode-status">本地规则 · 无网络请求</span>
+          </div>
+          <button id="restart-button" class="button button-secondary" type="button">重新开始</button>
+        </div>
+      </header>
+
+      <main>
+        <div id="notice" class="notice" role="status" aria-live="polite">
+          规则机器人模式已就绪。切换模式会从下一次机器人行动开始生效。
+        </div>
+
+        <section class="game-stage" aria-label="月影议事厅玩家席位">
+          <div class="stage-architecture" aria-hidden="true"></div>
+          <div class="stage-toolbar">
+            <p class="eyebrow">月影议席 · 玩家席位</p>
+            <span id="busy-indicator" class="busy-indicator" hidden>
+              <span class="spinner" aria-hidden="true"></span>机器人正在行动
+            </span>
+          </div>
+
+          <div class="moon-stage">
+            <div class="moon-halo" aria-hidden="true"></div>
+            <div class="council-table" aria-live="polite">
+              <div class="table-rune-ring" aria-hidden="true"></div>
+              <div class="moon-phases" aria-hidden="true"><i>◔</i><i>◑</i><i>●</i><i>◐</i><i>◕</i></div>
+              <div class="table-sigil" aria-hidden="true"><span></span></div>
+              <p id="table-phase-label">预言家行动</p>
+              <strong id="table-focus-label">等待选择查验目标</strong>
+            </div>
+            <div id="player-grid" class="council-ring" aria-live="polite"></div>
+          </div>
+
+          <div class="stage-legend" aria-label="玩家状态图例">
+            <span><i class="dot dot-alive"></i>存活</span>
+            <span><i class="dot dot-current"></i>当前发言</span>
+            <span><i class="dot dot-out"></i>出局</span>
+          </div>
+        </section>
+
+        <section class="action-panel game-panel" aria-labelledby="action-title">
+          <div class="action-copy">
+            <p class="eyebrow">当前行动</p>
+            <h2 id="action-title">开始教学局</h2>
+            <p id="action-help">查看规则后开始游戏。</p>
+          </div>
+          <div id="private-info" class="private-info"></div>
+          <div id="action-controls" class="action-controls"></div>
+        </section>
+
+        <details id="public-log" class="timeline-panel game-panel" open>
+          <summary>
+            <div class="timeline-heading">
+            <div>
+              <p class="eyebrow">议事记录</p>
+              <h2>公开发言与行动记录</h2>
+            </div>
+              <span class="timeline-meta"><span id="event-count" class="event-count">0 条</span><i aria-hidden="true"></i></span>
+          </div>
+          </summary>
+          <div id="event-list" class="event-list" role="list" aria-live="polite"></div>
+          <button id="log-history-toggle" class="log-history-toggle" type="button" aria-expanded="false" hidden>
+            展开全部记录
+          </button>
+        </details>
+
+        <section id="result-panel" class="result-panel" hidden>
+          <div class="result-ceremony">
+            <span id="result-emblem" class="result-emblem" aria-hidden="true">✦</span>
+            <div class="result-heading">
+              <p class="eyebrow">对局结算</p>
+              <h2 id="result-title"></h2>
+              <p id="result-description"></p>
+            </div>
+            <span id="result-camp-label" class="result-camp-label"></span>
+          </div>
+          <div class="result-divider" aria-hidden="true"><i></i></div>
+          <div id="role-reveal" class="role-reveal" aria-label="最终身份与存活状态"></div>
+          <div class="result-actions">
+            <p>身份已经全部揭晓，本局记录可在上方展开复盘。</p>
+            <button id="result-restart-button" class="button button-primary" type="button">再来一局</button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        教学版规则：2 狼人 · 1 预言家 · 3 村民 · 首夜保护 · 平票无人出局
+      </footer>
+    </div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
